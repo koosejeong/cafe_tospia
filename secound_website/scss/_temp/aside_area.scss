@@ -1,0 +1,20 @@
+// aside_area.scss
+#asideBox{  width:100%; @include conUnit(height, 700); background-image:linear-gradient(180deg, #edd, #fff); 
+  &>.fullBox{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; 
+    &>ul{ position:relative; width:70%; @include conUnit(height, 400); margin:auto;
+      &>li{ float:left; width:20%; height:100%; margin-right:5%; 
+        &>a{ display:block; @include conUnit(width, 200); @include conUnit(height, 200); border-radius:100%; transform:translateY(50%); background-color: #fff;
+          &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 20); text-align:center; @include conUnit(line-height, 200); color:#fff; }
+        } //a
+      } //li
+    } //ul
+    &>.txt_area{ position:relative; width:100%; height:0;
+      &>li{ width:100%; height:auto; 
+        &>p{ display:none; position:absolute; left:50%; transform:translateX(-50%); width:100%; height:100px; @include conUnit(font-size, 30); color:#000; text-shadow:3px 3px 5px #777; text-align:center; }
+      } //li
+    } //ul
+    &>p{ position:absolute; left:50%; transform:translateX(-50%); width:100%; height:auto; @include conUnit(font-size, 30); color:#000; text-shadow:3px 3px 5px #777; text-align:center; text-transform:capitalize;
+      &.action{ display:none; }
+    }
+  } //fullBox
+} //asideBox
