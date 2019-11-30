@@ -1,0 +1,19 @@
+// article_area.scss
+#conBox{ width:100%; @include conUnit(height, 1000); 
+  &>.fullBox{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; overflow:hidden; background-image: url('../../img/article01/img03.jpg'); background-size: cover; background-repeat: no-repeat; background-position:50% 50%;
+    &>.half_box01{ width:100%; height:50%; margin-left:-100%; transition:all 300ms ease;
+      &>a{ float:left; display:block;  width:30%; height:100%; background-image: url('../../img/article01/img01.jpg'); background-position:50% 50%; background-size:cover; background-repeat:no-repeat; box-shadow:3px 3px 5px #000; }
+      &>span{ float:left; display:block; @include conUnit(padding, 10); margin-left:5%; width:auto; height:100%; @include conUnit(font-size, 20); color:#fff; text-shadow:3px 3px 3px #000; }
+    &.action{ margin-left:0; }
+    } //div
+    &>.half_box02{ position:relative; width:100%; height:50%; margin-left:110%; transition:all 300ms ease;
+      &>a{ float:right; display:block; width:30%; height:100%; background-color: #eee; background-image: url('../../img/article01/img02.jpg'); background-position:50% 50%; background-size:cover; background-repeat:no-repeat; box-shadow:3px 3px 5px #000; }
+      &>span{ float:right; display:block; @include conUnit(padding, 10); margin-right:5%; width:auto; height:100%; @include conUnit(font-size, 20); color:#fff; text-shadow:3px 3px 3px #000; text-align:right;  }
+      &>a:last-of-type{ display:block; position:absolute; left:0; bottom:5%; @include conUnit(width, 300); @include conUnit(height, 100); background-color:rgba(248,246,237,0.5); @include conUnit(border-radius, 5); background-image:none; box-shadow:none; 
+        &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 30); color:#333; text-align:center; @include conUnit(line-height, 100); text-transform: capitalize; }
+      }
+    &.action{ margin-left:0;  }
+    } //div
+   
+  } //fullBox 
+} //conBox
