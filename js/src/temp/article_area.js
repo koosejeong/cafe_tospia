@@ -21,7 +21,7 @@
      if( winLoc >= winH){
        halfBoxOne.addClass('action');
        halfBoxTwo.addClass('action');
-     } else if( winLoc <= winH) {
+     } else if( winLoc <= winH + 500) {
        halfBoxOne.removeClass('action');
        halfBoxTwo.removeClass('action');
      }   

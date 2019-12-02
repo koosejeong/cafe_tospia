@@ -324,8 +324,7 @@
         margin-right: 5%;
         background-color: #fff;
         border-radius: 5px;
-        border-radius: 0.3125rem;
-        box-shadow: 3px 3px 5px #333; }
+        border-radius: 0.3125rem; }
         #conBox02 > .fullBox > ul > li:last-child {
           margin-right: 0; }
         #conBox02 > .fullBox > ul > li > a {

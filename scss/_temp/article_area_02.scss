@@ -2,7 +2,7 @@
 #conBox02{ width:100%; @include conUnit(height, 1000); background-image:linear-gradient(360deg, #edd, #fff); background-image: url('../../img/article02/img01.jpg'); background-position:0 0; background-size:cover; background-repeat: no-repeat;
   &>.fullBox{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
     &>ul{ display:none; width:70%; height:50%; margin:auto; 
-      &>li{ float:left; position:relative; width:30%; height:100%; margin-right:5%; background-color: #fff; @include conUnit(border-radius, 5); box-shadow:3px 3px 5px #333;
+      &>li{ float:left; position:relative; width:30%; height:100%; margin-right:5%; background-color: #fff; @include conUnit(border-radius, 5); 
       &:last-child{ margin-right:0; }
         &>a{ display:block; width:100%; height:70%; @include conUnit(border-radius, 5);  
           &>span{ display:block; position:absolute; @include conUnit(left, 10); @include conUnit(bottom, 10); width:100%; height:auto; @include conUnit(font-size, 30); color:#333; text-align:center; text-transform:capitalize; }
