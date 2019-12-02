@@ -22,8 +22,8 @@
   myLi.on('mouseenter click', function(e){
     e.preventDefault();
     let i = $(this).index();
-    $(this).children('a').css({border:'5px solid #fff'});
-    $(this).siblings().children('a').css({border:0});
+    $(this).children('a').css({position:'relative', border:'5px solid #fff', zIndex:10});
+    $(this).siblings().children('a').css({border:0, zIndex:0});
     fullTxt.addClass('action');
     if(i === 0){
       txtLi.eq(0).children(txtArea).css({display:'block'});

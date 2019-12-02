@@ -30,30 +30,11 @@
 <script src="./js/base/jquery-ui.min.js"></script>
 <script>
   
-    (function($){
+  (function($){
+   $('#wrap').load('./content_pc.html');
+
+  })(jQuery);
   
-      let ww = $(window).outerWidth();
-      const viewBrowser = function(ww) {
-        if( ww <= 480 ){
-          $('#wrap').load('./content_mob.html');
-        }else if( ww > 480 && ww <= 768 ) {
-          $('#wrap').load('./content_tab.html');
-        }else if( ww > 768 && ww <= 1366 ){
-          $('#wrap').load('./content_lab.html');
-        }else {
-          $('#wrap').load('./content_pc.html');
-        } 
-      };
-      viewBrowser(ww);
-    
-      $(window).on('resize', function(){
-        let nw = $(window).outerWidth();
-        if( ww !== nw){
-          location.reload();
-          viewBrowser(ww);
-        }
-      });
-    })(jQuery);
-  </script>
+</script>
 </body>
 </html>

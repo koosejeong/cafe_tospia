@@ -1,5 +1,5 @@
 // aside_area.scss
-#asideBox{  width:100%; @include conUnit(height, 700); background-image:linear-gradient(180deg, #edd, #fff); 
+#asideBox{  width:100%; height:auto; background-image:linear-gradient(180deg, #edd, #fff); 
   &>.fullBox{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; width:100%; height:auto; 
     &>ul{ position:relative; width:70%; @include conUnit(height, 400); margin:auto;
       &>li{ float:left; width:20%; height:100%; margin-right:5%; 

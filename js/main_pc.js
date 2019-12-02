@@ -3,7 +3,7 @@
   const wrap = $('#wrap');
 
    // header area==================
-   wrap.append('<header id="headBox" class="scroll"></header>');
+   wrap.append('<header id="headBox"></header>');
 
    const headArea = $('#headBox');
    const jsLink = (temp) => {
@@ -45,7 +45,7 @@
    });
 
   // footer area=======================
-  wrap.append('<footer id="footBox" class="scroll"></footer>');
+  wrap.append('<footer id="footBox"></footer>');
 
   const footerArea = $('#footBox');
   footerArea.load('./html/temp/footer_area.html', () => {

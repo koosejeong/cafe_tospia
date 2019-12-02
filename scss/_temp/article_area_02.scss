@@ -1,11 +1,11 @@
 // article_area_02.scss
-#conBox02{ width:100%; @include conUnit(height, 1000); background-image:linear-gradient(360deg, #edd, #fff); background-image: url('../../img/article02/img01.jpg'); background-position:50% 50%; background-size:cover; background-repeat: no-repeat;
+#conBox02{ width:100%; @include conUnit(height, 1000); background-image:linear-gradient(360deg, #edd, #fff); background-image: url('../../img/article02/img01.jpg'); background-position:0 0; background-size:cover; background-repeat: no-repeat;
   &>.fullBox{ position:relative; @include conUnit(padding, 50); box-sizing:border-box; @include fullBox; 
     &>ul{ display:none; width:70%; height:50%; margin:auto; 
-      &>li{ float:left; @include conUnit(padding, 20); box-sizing:border-box; width:30%; height:100%; margin-right:5%; background-color: #fff; @include conUnit(border-radius, 5); 
+      &>li{ float:left; position:relative; width:30%; height:100%; margin-right:5%; background-color: #fff; @include conUnit(border-radius, 5); box-shadow:3px 3px 5px #333;
       &:last-child{ margin-right:0; }
-        &>a{ display:block; width:100%; height:70%; 
-          &>span{ display:block; width:auto; height:auto; @include conUnit(font-size, 30); color:#333; text-align:center; transform:translateY(800%); text-transform:capitalize; }
+        &>a{ display:block; width:100%; height:70%; @include conUnit(border-radius, 5);  
+          &>span{ display:block; position:absolute; @include conUnit(left, 10); @include conUnit(bottom, 10); width:100%; height:auto; @include conUnit(font-size, 30); color:#333; text-align:center; text-transform:capitalize; }
         } //a
       } //li
       &.action>li{ transform:translateY(50%); }
@@ -13,6 +13,6 @@
       &.action>li:nth-child(2){ transition:all 500ms ease 600ms; }
       &.action>li:nth-child(3){ transition:all 500ms ease 900ms; }
     } //ul
-    &>span{ display:block; position:absolute; left:50%; transform:translate(-50%); bottom:20%; width:100%; height:auto; @include conUnit(font-size, 36); text-align:center; text-shadow:3px 3px 5px #777; }
+    &>p{ position:absolute; left:50%; transform:translate(-50%); bottom:15%; width:100%; height:auto; @include conUnit(font-size, 36); text-align:center; text-shadow:3px 3px 5px #777; }
   } //fullBox
 } //conBox02

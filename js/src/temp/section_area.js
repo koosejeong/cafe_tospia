@@ -33,7 +33,7 @@
   const goSlide = function(){
     go = setInterval(function(){
       moveSlide();
-    }, timed * 10);
+    }, timed * 5);
   };
 
   const stopSlide = function(){
@@ -42,10 +42,11 @@
   goSlide();
 
   viewBox.on({'mouseenter':stopSlide, 'mouseleaver':goSlide});
-
   btn.on('click', function(e){
     e.preventDefault();
-    if($(this) == 0){
+    let idx = $(this).index();
+
+    if( idx == 0 ){// .next
       myN++;
       if(myN >= len-1){
         myN = 0;
@@ -53,7 +54,8 @@
       }
     } else {
       myN--;
-    } slideUl.animate({marginLeft:-100 * myN + '%'}, function(){
+    } 
+    slideUl.animate({marginLeft:-100 * myN + '%'}, function(){
       if( myN < 0){
         myN = len-2;
         slideUl.css({marginLeft:-100 * myN + '%'});
