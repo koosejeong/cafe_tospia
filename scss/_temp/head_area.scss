@@ -10,9 +10,11 @@
           &>li{ float:left; width:30%; height:auto; margin-right:5%; 
           &:last-child{ margin-right:0; }  
             &>dl{ width:100%; height:auto; 
-              &>dt{ width:100%; height:auto; @include conUnit(margin-bottom, 50); transform:translateY(50%); @include conUnit(font-size, 24); @include conUnit(line-height, 50); text-align:center; text-transform: capitalize; }
+              &>dt{ width:100%; height:auto; @include conUnit(margin-bottom, 50); transform:translateY(50%);   
+                &>a{ display:block; width:100%; @include conUnit(height, 50); @include conUnit(font-size, 24); @include conUnit(line-height, 50); text-align:center; text-transform: capitalize; color:#000; }
+              }
               &>dd{ display:none; width:100%; @include conUnit(height, 50); 
-                &>a{ display:block; @include fullBox; @include conUnit(font-size, 18); color:#333; background-color:rgba(248, 246, 237, 0.5); text-align:center; }  
+                &>a{ display:block; @include fullBox; @include conUnit(font-size, 18); color:#000; background-color:rgba(248, 246, 237, 0.5); text-align:center; }  
               &:after:hover{ content:" "; display:block; position:absolute; bottom:0; left:0; z-index:100; width:100%; border-top:1px solid #575; }
               } //dd
             } //dl
@@ -24,7 +26,9 @@
           &>li{ float:left; width:30%; height:auto; margin-right:5%; 
           &:last-child{ margin-right:0; }   
             &>dl{ width:100%; height:auto; 
-             &>dt{ width:100%; height:auto; transform:translateY(50%); @include conUnit(margin-bottom, 50); @include conUnit(font-size, 24); @include conUnit(line-height, 50); text-align:center; text-transform: capitalize; }
+             &>dt{ width:100%; height:auto; @include conUnit(margin-bottom, 50);  transform:translateY(50%); 
+              &>a{ display:block; width:100%; @include conUnit(height, 50); @include conUnit(font-size, 24); @include conUnit(line-height, 50); text-align:center; text-transform: capitalize; color:#000; }
+            }
              &>dd{ display:none; width:100%; @include conUnit(height, 50); 
               &>a{ display:block; @include fullBox; @include conUnit(font-size, 18); color:#333; background-color:rgba(248, 246, 237, 0.5); text-align:center; }
               } //dd

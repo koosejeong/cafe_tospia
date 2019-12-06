@@ -39,7 +39,7 @@ for(let i=0; i<firstLi.length; i++){
   let firstDl = firstLi.children('dl');
   let firstDt = firstDl.children('dt');
   let firstDd = firstDl.children('dd');
-  firstDt.eq(i).append(t01[i].title);
+  firstDt.eq(i).append(`<a href="#">${t01[i].title}</a>`);
   for(let j=0; j<t01[i].subtitle.length; j++){
     firstDd.eq(i).append(`<a href="#">${t01[i].subtitle[j]}</a>`); 
   }
@@ -49,19 +49,27 @@ for(let i=0; i<firstLi.length; i++){
   let secoundDl = secoundLi.children('dl');
   let secoundDt = secoundDl.children('dt');
   let secoundDd = secoundDl.children('dd');
-  secoundDt.eq(i).append(t02[i].title);
+  secoundDt.eq(i).append(`<a href="#">${t02[i].title}</a>`);
   for(let j=0; j<t02[i].subtitle.length; j++){
     secoundDd.eq(i).append(`<a href="#">${t02[i].subtitle[j]}</a>`); 
   }
 }
 
-nav.find('dl').on('click mouseenter', function(e){
+nav.find('dt>a').on('click mouseenter focus', function(e){
   e.preventDefault();
-  $(this).children('dd').stop().slideDown();
+  nav.find('dd').stop().slideUp();
+  $(this).parent().next('dd').stop().slideDown();
 });
-nav.find('dl').on('mouseleave', function(e){
+nav.find('dt').on('mouseleave', function(e){
   e.preventDefault();
-  $(this).children('dd').stop().slideUp();
+  $(this).next('dd').stop().slideUp();
+});
+const navLi = nav.find('li');
+navLi.each(function(i,data){
+  $(data).find('dd').find('a').eq(-1).on('blur', function(){
+    // console.log('!!!')
+    $(this).closest('dd').slideUp();
+  })
 });
 
 win.on('mousewheel', function(e){
