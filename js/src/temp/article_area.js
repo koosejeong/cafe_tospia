@@ -21,7 +21,7 @@
      if( winLoc >= 700){
        halfBoxOne.addClass('action');
        halfBoxTwo.addClass('action');
-     } else if( winLoc <= 700) {
+     } else if( winLoc <= 500) {
        halfBoxOne.removeClass('action');
        halfBoxTwo.removeClass('action');
      }   
