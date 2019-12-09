@@ -18,10 +18,10 @@
     (e.originalEvent.wheelDelta) ? n = e.originalEvent.wheelDelta * -1 : n = e.originalEvent.detail * 40;
     
      let winLoc = $(this).scrollTop();
-     if( winLoc >= winH){
+     if( winLoc >= 700){
        halfBoxOne.addClass('action');
        halfBoxTwo.addClass('action');
-     } else if( winLoc <= winH + 500) {
+     } else if( winLoc <= 700) {
        halfBoxOne.removeClass('action');
        halfBoxTwo.removeClass('action');
      }   

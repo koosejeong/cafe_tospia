@@ -72,11 +72,12 @@ navLi.each(function(i,data){
   })
 });
 
+
 win.on('mousewheel', function(e){
   (e.originalEvent.wheelDelta) ? n = e.originalEvent.wheelDelta * -1 : n = e.originalEvent.detail * 40;
   
   let winLoc = $(this).scrollTop();
-  if( winLoc > 1000){
+  if( winLoc > 700){
     wrapBox.css({top:0, left:0, width:'100%', borderRadius:0});
   } else {
     wrapBox.css({top:'20%', left:'10%', width:'80%', borderRadius:'10px'});
